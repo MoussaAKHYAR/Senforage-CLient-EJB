@@ -1,6 +1,8 @@
 package sn.senforage.controller;
 
 import java.io.IOException;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,8 +28,11 @@ import sn.senforage.entities.Client;
 public class ClientServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
+	@EJB
 	private IClient clientdao ;
+	@EJB
 	private IVillage villagedao;
+	@EJB
 	private IUser userdao;
 
 	/**

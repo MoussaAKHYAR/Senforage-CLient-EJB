@@ -1,6 +1,8 @@
 package sn.senforage.controller;
 
 import java.io.IOException;
+
+import javax.ejb.EJB;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +23,7 @@ import sn.senforage.entities.User;
 @WebServlet(name = "login", urlPatterns = { "/login" })
 public class LoginSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+	@EJB
 	private IUser iuser;
 	/**
 	 * @see Servlet#init(ServletConfig)
